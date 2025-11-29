@@ -62,10 +62,9 @@
             {% for movie in movies %}
             <div class="movie-card">
               <a href="{% url 'movie_detail' movie.id %}">
-                <img
-                  src="{% static 'rental/images/'|add:movie.image %}"
-                  alt="{{ movie.title }}"
-                />
+                {% with 'rental/images/'|add:movie.image as img_path %}
+                <img src="{% static img_path %}" alt="{{ movie.title }}">
+                {% endwith %}
                 <div class="movie-title">{{ movie.title }}</div>
               </a>
             </div>
