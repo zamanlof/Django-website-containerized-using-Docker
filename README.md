@@ -58,7 +58,14 @@ Start the container:
 ```
 docker run -d --name movies-app -p 8000:8000 movies-website
 ```
-
+or run the compose file:
+```
+docker compose up
+```
+and stop using:
+```
+docker compose down
+```
 ---
 
 ## 3. Access the application
