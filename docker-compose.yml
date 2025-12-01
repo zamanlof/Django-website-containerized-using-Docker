@@ -1,6 +1,6 @@
 
 services:
-    movies-website:
+    movies-app:
         build: .
     
         ports:
